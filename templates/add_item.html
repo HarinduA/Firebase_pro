@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Item</title>
+</head>
+<body>
+    <h1>Add New Item</h1>
+    <form action="{{ url_for('add_item') }}" method="POST">
+        <label for="itemCode">Item Code:</label><br>
+        <input type="text" id="itemCode" name="itemCode" required><br><br>
+        
+        <label for="description">Description:</label><br>
+        <input type="text" id="description" name="description" required><br><br>
+        
+        <label for="qty">Quantity:</label><br>
+        <input type="number" id="qty" name="qty" required><br><br>
+        
+        <label for="price">Price:</label><br>
+        <input type="number" step="0.01" id="price" name="price" required><br><br>
+        
+        <button type="submit">Add Item</button>
+    </form>
+    <br>
+    <a href="{{ url_for('index') }}">Back to Store Items</a>
+</body>
+</html>
